@@ -1,0 +1,25 @@
+RUNNING THE WEB SERVER
+============================================================
+Extract "testing.tar" and use it as your webserver root
+directory. Run your webserver using the following command
+
+./web_server <port> <path_to_testing>/testing <num_dispatch> <num_worker> <queue_len>
+
+For example, to run the web server at port 9000, with root directory "/home/student/joe/testing" with 100 dispatch and worker threads,
+queue length 100 run the following command
+
+./web_server 9000 /home/student/joe/testing 100 100 100
+
+You should now (using another terminal) be able to query a single file, such as the following:
+
+wget http://127.0.0.1:9000/image/jpg/29.jpg
+
+You can test many requests at once using the following command (note your server needs to be bound at port 9000 for this):
+
+wget -i <path-to-urls>/urls -o results
+
+In our case we should run
+wget -i /home/student/joe/testing/urls -o results
+
+The above command will ask wget to fetch all the URLs listed
+on the file named "urls" that you downloaded from the assignment page.
