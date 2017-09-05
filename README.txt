@@ -15,6 +15,4 @@ Usage:
 
 Requests will be logged in testing/web_server_log.
 
-To test the web server you can try to download a file by using the command wget. To execute the following command on your machine locally run the following execution wget http://127.0.0.1:PORT/image/jpg/30.jpg. NOTE that localhost is also 127.0.0.1 and PORT is the port you binded the web server to. See testing/how_to_test for more information.
-
-Testing for concurrency: to run multiple executions concurrently, the following command can be run. xargs -n -P. E.g., running echo $URL | xargs -n 1 -P 8 wget, will run wget 8 times simultaneously (notice the (-P 8) with 1 argument each time (-n 1)).
+Testing information can be found in testing/how_to_test.
